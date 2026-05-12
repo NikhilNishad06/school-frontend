@@ -1,0 +1,64 @@
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b2c61 60%, #fff 40%);
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 80px;
+  overflow: hidden;
+}
+
+.hero-text {
+  padding: 60px 20px;
+}
+
+.kids-img {
+  max-height: 480px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* NAVBAR CUSTOM THEME */
+.nav-link {
+  color: #475569 !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #f59e0b !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 5px;
+  left: 8px;
+  background-color: #f59e0b;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 16px);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  color: #0b2c61 !important;
+}
+
+.btn-outline-warning {
+  border-color: #f59e0b !important;
+  color: #f59e0b !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: #f59e0b !important;
+  color: #fff !important;
+}

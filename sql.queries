@@ -1,0 +1,34 @@
+-- WARNING: This schema is for context only and is not meant to be run.
+-- Table order and constraints may not be valid for execution.
+
+CREATE TABLE public.admissions (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  studentFirstName text,
+  studentLastName text,
+  classAppliedFor text,
+  dateOfBirth text,
+  guardianFirstName text,
+  guardianLastName text,
+  address jsonb,
+  contact jsonb,
+  signature text,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT admissions_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.messages (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  userName text NOT NULL,
+  userEmail text NOT NULL,
+  userNumber text,
+  userMessage text NOT NULL,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT messages_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.students (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  name text NOT NULL,
+  email text NOT NULL UNIQUE,
+  password text NOT NULL,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT students_pkey PRIMARY KEY (id)
+);
