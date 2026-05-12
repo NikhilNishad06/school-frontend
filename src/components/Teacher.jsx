@@ -1,5 +1,5 @@
 import React from "react";
-import "./Teacher.css";
+import "./teacher.css";
 
 export default function Teacher() {
   const teachers = [
